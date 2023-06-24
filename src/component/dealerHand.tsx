@@ -6,7 +6,7 @@ const DealerHand = ({deck, canPlay, winner, playerSum, role}) => {
 		<>
 			<div>
 				<div id={role} className="flex justify-center mt-14 relative scale-[0.8] flex-wrap w-[300px]">
-						<h1 className={`text-3xl text-primary absolute -top-8 -right-10 ${winner == 'you' ? 'line-through' : ''} `}>{!canPlay ? playerSum : hiddenScore.pop()?.value}</h1>
+						<h1 className={`text-3xl text-primary absolute -top-8 -right-10 ${winner == 'you' ? 'line-through' : ''} `}>{playerSum}</h1>
 						{deck.map((card, index) => {
 							if (canPlay) {
 								const hidden = index == 0 ? "bg-[url('/src/assets/cards/cardBack.png')] -rotate-6 -mt-3" : "bg-[url('/src/assets/cards/card.png')]";
